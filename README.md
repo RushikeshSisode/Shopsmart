@@ -1,4 +1,4 @@
-﻿# MERN E-Commerce Store ( Not fully done yet )
+﻿# MERN E-Commerce Store ( Work in Progress ...)
 
 
 
