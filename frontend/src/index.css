@@ -1,0 +1,363 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Amazon-style Reset and Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Amazon Ember", Arial, sans-serif;
+  background-color: #EAEDED;
+  color: #111;
+  line-height: 1.5;
+}
+
+/* Amazon Color Variables */
+:root {
+  --amazon-orange: #FF9900;
+  --amazon-dark: #131A22;
+  --amazon-nav: #232F3E;
+  --amazon-primary: #FF9900;
+  --amazon-hover: #FF8C00;
+  --amazon-light-gray: #F3F3F3;
+  --amazon-border: #DDD;
+  --amazon-text: #111;
+  --amazon-dark-text: #111;
+  --amazon-light-text: #555;
+  --amazon-blue: #007185;
+  --amazon-blue-hover: #C7511F;
+  --amazon-yellow: #F0C14B;
+  --amazon-yellow-hover: #DD9B0F;
+  --amazon-green: #067D62;
+  --amazon-red: #B12704;
+  --amazon-gold: #FFA41C;
+}
+
+/* Amazon Button Styles */
+.amazon-btn {
+  background: linear-gradient(to bottom, #F7DFA5, #F0C14B);
+  border: 1px solid #A88734;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.amazon-btn:hover {
+  background: linear-gradient(to bottom, #F5D78E, #EBB93D);
+  border-color: #9C7E31;
+}
+
+.amazon-btn-primary {
+  background: linear-gradient(to bottom, #F7DFA5, #F0C14B);
+  border: 1px solid #A88734;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.amazon-btn-primary:hover {
+  background: linear-gradient(to bottom, #F5D78E, #EBB93D);
+  border-color: #9C7E31;
+}
+
+.amazon-btn-secondary {
+  background: linear-gradient(to bottom, #F7F8FA, #E7E9EC);
+  border: 1px solid #ADB1B8;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  color: #111;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.amazon-btn-secondary:hover {
+  background: linear-gradient(to bottom, #E7E9EC, #D5D8DC);
+}
+
+/* Amazon Card Styles */
+.amazon-card {
+  background: white;
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  padding: 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.amazon-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Amazon Badge */
+.amazon-badge {
+  background: #CC0C39;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+/* Amazon Rating Stars */
+.amazon-stars {
+  color: #FFA41C;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.amazon-stars-empty {
+  color: #DDD;
+}
+
+/* Product Grid */
+.amazon-product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Price Styling */
+.amazon-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #B12704;
+}
+
+.amazon-price-small {
+  font-size: 14px;
+  font-weight: 400;
+  color: #B12704;
+}
+
+.amazon-price-symbol {
+  font-size: 13px;
+  font-weight: 400;
+  position: relative;
+  top: -4px;
+}
+
+/* Shipping Info */
+.amazon-shipping {
+  color: #067D62;
+  font-size: 13px;
+}
+
+.amazon-prime {
+  color: #FF9900;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+/* Delivery Info */
+.amazon-delivery {
+  color: #111;
+  font-size: 13px;
+}
+
+.amazon-delivery-bold {
+  font-weight: 700;
+}
+
+/* Quick Look */
+.amazon-quick-look {
+  color: #007185;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.amazon-quick-look:hover {
+  color: #C7511F;
+  text-decoration: underline;
+}
+
+/* Section Titles */
+.amazon-section-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.amazon-section-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
+
+/* Navigation Styles */
+.amazon-nav-link {
+  color: #FFF;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 2px;
+  transition: all 0.2s ease;
+}
+
+.amazon-nav-link:hover {
+  color: #FFF;
+  text-decoration: none;
+  border: 1px solid #FFF;
+}
+
+.amazon-nav-link-active {
+  border: 1px solid #FFF;
+}
+
+/* Inputs */
+.amazon-input {
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 13px;
+  width: 100%;
+  transition: border-color 0.2s ease;
+}
+
+.amazon-input:focus {
+  border-color: #FF9900;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.2);
+}
+
+.amazon-select {
+  border: 1px solid #DDD;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 13px;
+  background: white;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .amazon-product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+    padding: 10px;
+  }
+
+  .amazon-section-title {
+    font-size: 18px;
+  }
+
+  .amazon-price {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .amazon-product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    padding: 8px;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F1F1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8A8A8;
+}
+
+/* Loading Animation */
+@keyframes amazon-loading {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+.amazon-skeleton {
+  background: linear-gradient(90deg, #F0F0F0 25%, #E0E0E0 50%, #F0F0F0 75%);
+  background-size: 200px 100%;
+  animation: amazon-loading 1.5s infinite;
+  border-radius: 4px;
+}
+
+/* Utility Classes */
+.amazon-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.amazon-bg-light {
+  background-color: #EAEDED;
+}
+
+.amazon-bg-white {
+  background-color: white;
+}
+
+.amazon-bg-nav {
+  background-color: #232F3E;
+}
+
+.amazon-bg-dark {
+  background-color: #131A22;
+}
+
+.amazon-text-dark {
+  color: #111;
+}
+
+.amazon-text-light {
+  color: #555;
+}
+
+.amazon-text-blue {
+  color: #007185;
+}
+
+.amazon-text-red {
+  color: #B12704;
+}
+
+.amazon-text-green {
+  color: #067D62;
+}
+
+.amazon-border {
+  border: 1px solid #DDD;
+}
+
+.amazon-border-top {
+  border-top: 1px solid #DDD;
+}
+
+.amazon-border-bottom {
+  border-bottom: 1px solid #DDD;
+}
+
+.amazon-shadow {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.amazon-shadow-lg {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
